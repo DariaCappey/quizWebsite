@@ -1,0 +1,93 @@
+body {
+  margin:0;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+[class^="background_"] {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.background_1 {
+  display: flex;
+  background-color: lightblue;
+  height: 100vh;
+  width: 100vw;
+}
+
+.background_2 {
+  background-color: pink;
+  height: 100vh;
+  width: 100vw;
+}
+
+.question_background {
+  width: 70vw;
+  height: 80vh;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.question_box {
+  position: absolute;
+  width: 70vw;
+  height: 80vh;
+  flex-direction: column;
+}
+
+.question_box h1 {
+  color: white;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label img {
+  width: 45%;
+  margin-bottom: 30px;
+  border: 5px solid rgba(255,0,0,0);
+}
+
+input[type="radio"]:checked + label img {
+  border: 5px solid blue;
+}
+
+.question_options {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.question_options label {
+  display: flex;
+  justify-content: center;
+}
+
+[class^="button_"] {
+  width: 40%;
+  position: absolute;
+  bottom: 50px;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.button_check {
+  background: transparent;
+  color: white;
+  border: 2px solid red;
+  left: 5%
+}
+
+.button_next {
+  display: none;
+  background: transparent;
+  color: white;
+  border: 2px solid green;
+  right: 5%;
+}
