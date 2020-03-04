@@ -6,8 +6,10 @@ $(document).ready(function(){
   var changeBackground = true;
 
   var images = document.getElementsByClassName("start_img");
+  var div = document.getElementById("start_quiz");
   var ct = 0;
 
+  moveDiv();
   switchBackground();
 
   function switchBackground() {
@@ -24,7 +26,30 @@ $(document).ready(function(){
       ct++;
       setTimeout(switchBackground, 3500);
     }
-    console.log("still in switching loop");
+  }
+
+  var x = Math.random()* (3 - 1) + 1;
+  var y = Math.random()* (3 - 1) + 1;
+  console.log("x: "+x);
+  console.log("y: "+y);
+
+  function moveDiv() {
+    if (changeBackground){
+      var currentPosition_y = parseInt(div.style.top);
+      var currentPosition_x = parseInt(div.style.left);
+      
+      if ((currentPosition_x + div.clientWidth > window.innerWidth && x > 0) || (currentPosition_x == 0 && x < 0)){
+        x = x * (-1);
+      }
+
+      if ((currentPosition_y + div.clientHeight > window.innerHeight && y > 0) || (currentPosition_y < 0 && y < 0)){
+        y = y * (-1);
+      }
+
+      div.style.top = currentPosition_y + y;
+      div.style.left = currentPosition_x + x;
+      setTimeout(moveDiv, 15);
+    }
   }
 
   $(".start .question_wrapper").click(function(){
