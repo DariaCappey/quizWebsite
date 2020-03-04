@@ -1,8 +1,28 @@
+@media (max-width: 400px) {
+  .mobile {
+    display: block !important;
+  }
+  .desktop {
+    display: none !important;
+  }
+}
+
 body {
   margin:0;
   font-family: 'Open Sans Condensed', sans-serif;
-  color: white;
 } 
+
+.desktop {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile{
+  display: none;
+  color: white;
+}
 
 [class^="background"] {
   display: none;
