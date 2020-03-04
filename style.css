@@ -32,6 +32,7 @@ body {
 }
 
 .failed p {
+  margin-top: -10px;
   font-weight: bolder;
   text-align: center;
 }
@@ -48,6 +49,7 @@ p.small {
 }
 
 .success p {
+  margin-top: -10px;
   font-weight: bolder;
   text-align: center;
 }
