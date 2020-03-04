@@ -9,7 +9,11 @@ $(document).ready(function(){
   var div = document.getElementById("start_quiz");
   var ct = 0;
 
-  moveDiv();
+  setTimeout(function(){
+    var h3 = document.getElementById("change_text");
+    $("#change_text").text("Click me!");
+    moveDiv();
+  }, 3500);
   switchBackground();
 
   function switchBackground() {
@@ -52,7 +56,7 @@ $(document).ready(function(){
     }
   }
 
-  $(".start .question_wrapper").click(function(){
+  $("#start_quiz").click(function(){
     changeBackground = false;
     $(".background_1").css("display","flex");
     $('.start [class^="question_"]').fadeOut("slow");
