@@ -1,6 +1,38 @@
 $(document).ready(function(){
 
+  console.log('ready');
+
   var score = 5;
+  var changeBackground = true;
+
+  var images = document.getElementsByClassName("start_img");
+  var ct = 0;
+
+  switchBackground();
+
+  function switchBackground() {
+    if (changeBackground){
+      var bf = ct - 1;
+      if(bf == -1){
+        bf = images.length-1;
+      }
+      if(ct == images.length){
+        ct = 0;
+      }
+      $(images[bf]).fadeOut(1700);
+      $(images[ct]).fadeIn(1700);
+      ct++;
+      setTimeout(switchBackground, 3500);
+    }
+    console.log("still in switching loop");
+  }
+
+  $(".start .question_wrapper").click(function(){
+    changeBackground = false;
+    $(".background_1").css("display","flex");
+    $('.start [class^="question_"]').fadeOut("slow");
+    $(".start").slideUp("slow");
+  });
 
   $(".background_1 .button_next").click(function(){
     $(".background_2").css("display","flex");
@@ -85,11 +117,11 @@ $(document).ready(function(){
   function blendEndIn(cls){
     $(cls).fadeIn(1200);
     $(cls).css("display","flex");
-    $(cls + ' [class^="question"]').css("display","none");
+    $(cls + ' [class^="question_wrapper"]').css("display","none");
     setTimeout(function() {
-      $(cls + ' [class^="question"]').fadeIn(1200);
-      $(cls + ' [class^="question"]').css("transition","height 2s");
-      $(cls + ' [class^="question"]').css("height","250px");
+      $(cls + ' [class^="question_wrapper"]').fadeIn(1200);
+      $(cls + ' [class^="question_wrapper"]').css("transition","height 2s");
+      $(cls + ' [class^="question_wrapper"]').css("height","250px");
     }, 1500);
     $('[class^="background_"]').css("display","none");
   }
