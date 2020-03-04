@@ -89,3 +89,21 @@ body {
     border: 2px solid green;
     right: 5%;
   }
+
+  .question_options input[type="text"] {
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .question_options span {
+    color: white;
+  }
+
+  .question_options div {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
