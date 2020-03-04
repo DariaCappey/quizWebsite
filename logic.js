@@ -19,7 +19,7 @@ $(document).ready(function(){
   });
 
   $(".background_3 .button_next").click(function(){
-    blendEndIn('success');
+    blendEndIn('.success');
   });
 
   $(".background_1 .button_check").click(function(){
