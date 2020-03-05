@@ -174,25 +174,29 @@ p.small {
 .question_options label {
   display: flex;
   justify-content: center;
-} [class^="button_"] {
-  width: 40%;
+} 
+
+[class^="button_"] {
   position: absolute;
   bottom: 20px;
+  padding: 8px;
+  display: flex;
+  background: white;
+  border: 2px solid grey;
+  border-radius: 100%;
+}
+
+[class^="button_"] img {
+  width: 35px;
 }
 
 .button_check {
-  background: transparent;
-  color:white;
-  border: 2px solid red;
-  left: 5%
+  left: 10%
 }
 
 .button_next {
   display: none;
-  background: transparent;
-  color:white;
-  border: 2px solid green;
-  right: 5%;
+  right: 10%;
 }
 
 .question_options input[type="text"] {
