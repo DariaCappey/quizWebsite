@@ -50,8 +50,8 @@ $(document).ready(function(){
         y = y * (-1);
       }
 
-      div.style.top = currentPosition_y + y;
-      div.style.left = currentPosition_x + x;
+      div.style.top = (currentPosition_y + y).toString()+'px';
+      div.style.left = (currentPosition_x + x).toString()+'px';
       setTimeout(moveDiv, 15);
     }
   }
