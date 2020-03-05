@@ -68,6 +68,17 @@ body {
   background-repeat: no-repeat;
 }
 
+.background_2 .sortable div {
+  border: 2px solid white;
+  padding: 2px;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+.dragged {
+  opacity: .5;
+  background: #C8EBFB;
+}
+
 .background_3 {
   background-image: url("images/q3.jpg");
   background-size: cover;

@@ -2,6 +2,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
     <script src="logic.js"></script>
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet" />
@@ -64,37 +65,29 @@
             <div class="question_background"></div>
             <div class="question_box">
                 <h3>Ordne den Ablauf einer Tarifverhandlung richtig an</h3>
-                <div class="question_options">
-                    <div>
-                        <input type="text" class="q2_inputs" name="1" />
+                <div class="question_options sortable" id="simpleList">
+                    <div id="sort1">
                         <span>Kündigung Tarifvertrag</span>
                     </div>
-                    <div>
-                        <input type="text" class="q2_inputs" name="2" />
+                    <div id="sort2">
                         <span>Tarifverhandlungen</span>
                     </div>
-                    <div>
-                        <input type="text" class="q2_inputs" name="3" />
+                    <div id="sort3">
                         <span>eventuelle Schlichtungsversuche</span>
                     </div>
-                    <div>
-                        <input type="text" class="q2_inputs" name="4" />
+                    <div id="sort4">
                         <span>Urabstimmung</span>
                     </div>
-                    <div>
-                        <input type="text" class="q2_inputs" name="5" />
+                    <div id="sort5">
                         <span>Kampfmaßnahmen - Streik</span>
                     </div>
-                    <div>
-                        <input type="text" class="q2_inputs" name="6" />
+                    <div id="sort6">
                         <span>neue Verhandlungen</span>
                     </div>
-                    <div>
-                        <input type="text" class="q2_inputs" name="7" />
+                    <div id="sort7">
                         <span>Urabstimmung über Streikende</span>
                     </div>
-                    <div>
-                        <input type="text" class="q2_inputs" name="8" />
+                    <div id="sort8">
                         <span>neuer Tarifvertrag</span>
                     </div>
                 </div>

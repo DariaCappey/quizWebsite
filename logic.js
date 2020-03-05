@@ -69,6 +69,9 @@ $(document).ready(function(){
     $('.background_1 [class^="question_"]').fadeOut("slow");
     $(".button_next").css("display","none");
     $('input[type="radio"]:checked').prop("checked",false);
+    Sortable.create(simpleList, { 
+      ghostClass: 'dragged' 
+    });
   });
 
   $(".background_2 .button_next").click(function(){
@@ -99,21 +102,23 @@ $(document).ready(function(){
 
   $(".background_2 .button_check").click(function(){
     checkScore();
-    ans = document.getElementsByClassName("q2_inputs");
-    console.log(ans);
+    
     var right = true;
     var wrong = [];
-    Array.from(ans).forEach(checkValue);
-
-    function checkValue(item) {
-      if (item.value != item.name){
+    
+    var ans = document.querySelectorAll('#simpleList > div');
+    for (i = 0; i < ans.length; i++){
+      var l = ans[i].id.length-1;
+      var corAns = ans[i].id.charAt(l);
+      console.log(corAns+'='+(i+1));
+      if (corAns != i+1){
         right = false;
-        wrong.push(item);
+        wrong.push(ans[i])
       }
     }
 
     if (right){
-      $('input[type="text"]').css("border-color","green");
+      $('#simpleList > div').css("border-color","green");
       $(".button_next").css("display","block");
     } else {
       score = score - 1;
